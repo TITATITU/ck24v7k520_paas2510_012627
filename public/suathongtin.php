@@ -4,7 +4,6 @@ $pdo = getDbConnection();
 $thongbao = "";
 $sv = null;
 
-// Lấy thông tin sinh viên theo masv trên URL hoặc từ form tìm kiếm
 $masv_input = $_GET['masv'] ?? $_POST['search_masv'] ?? '';
 
 if (!empty($masv_input)) {
@@ -13,7 +12,6 @@ if (!empty($masv_input)) {
     $sv = $stmt->fetch();
 }
 
-// Xử lý cập nhật khi submit form sửa
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_sv'])) {
     try {
         $stmt = $pdo->prepare("UPDATE masv_sinhvien SET hoten = ?, namsinh = ?, dienthoai = ?, email = ? WHERE masv = ?");
@@ -40,7 +38,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_sv'])) {
 <body style="font-family: Arial; margin: 40px;">
     <h2>Cập nhật thông tin sinh viên</h2>
     
-    <!-- Form nhập mã sinh viên để tìm kiếm thông tin cần sửa -->
     <form method="GET">
         <label>Nhập Mã SV cần sửa:</label>
         <input type="text" name="masv" value="<?= htmlspecialchars($masv_input) ?>" required>

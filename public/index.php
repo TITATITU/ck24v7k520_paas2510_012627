@@ -1,5 +1,4 @@
 <?php
-// Thay đổi thông tin sinh viên của bạn vào đây
 $hoten = "Nguyen Huu Tri";
 $masv = "Ck24V7K520";
 $stt = "14";
