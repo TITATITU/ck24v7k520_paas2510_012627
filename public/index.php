@@ -1,9 +1,9 @@
 <?php
 // Thay đổi thông tin sinh viên của bạn vào đây
-$hoten = "Lê Chung Tình";
-$masv = "DC24V7K033";
-$stt = "01";
-$lop = "DC24V7K2";
+$hoten = "Nguyen Huu Tri";
+$masv = "Ck24V7K520";
+$stt = "14";
+$lop = "CK24V7K1";
 ?>
 <!DOCTYPE html>
 <html lang="vi">
